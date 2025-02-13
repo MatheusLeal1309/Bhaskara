@@ -1,8 +1,8 @@
 const prompt = require('prompt-sync')();
-let tentativas = 0;
+let tentativas = 1;
 let numero = 0;
 
-numero = parseInt(prompt("Digite um número entre 0 e 100: "));
+numero = prompt("Digite um número entre 0 e 100: ");
 var resultado = Math.round(Math.random() * 100);
 
 while(numero != resultado)
@@ -21,4 +21,4 @@ while(numero != resultado)
 
 }
 
-console.log("Parabéns, você acertou em: " + tentativas);
+console.log("Parabéns, você acertou em: " + tentativas + " tentativas.");
