@@ -1,5 +1,5 @@
 
-let jogador = 20 ;
+let jogador = 100 ;
 
 for(let rodada = 1; rodada <=20; rodada++)
 {
