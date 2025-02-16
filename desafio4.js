@@ -4,7 +4,7 @@ let listaDeCompras = [];
 
 do
 {
-    console.log("Bem-vindo às compras, selecione a opção desejada: ");
+    console.log("Bem-vindo as compras, selecione a opção desejada: ");
     console.log("1 - Adicinar Itens: ");
     console.log("2 - Remover um item: ");
     console.log("3 - Exibir itens: ");
@@ -24,7 +24,7 @@ do
             exibirLista();
             break;
         case 4:
-            sair();
+            console.log("Obrigado por utilizar nossos serviços, tenha um ótimo dia!")
             break;
         default:
             console.log("Digite uma opção válida.");
@@ -35,9 +35,8 @@ do
 
 function adicionarItem()
 {
-    do
-    {
-        item = prompt("Adicione quantos itens quiser à lista de compras e para sair digite 0: ");
+    do{
+        item = prompt("Adicione quantos itens quiser a lista de compras e para sair digite 0: ");
         listaDeCompras.push(item);
         console.log("Item adicionado com sucesso.");
     } while(item != 0)
@@ -47,18 +46,12 @@ function adicionarItem()
 function removerItem()
 {   
     item = prompt("Digite o item q deseja remover: ");
-    let indice = listaDeCompras.indexOf(item);
-    listaDeCompras.splice(indice, 1);
+    let remove = listaDeCompras.indexOf(item);
+    listaDeCompras.splice(remove, 1);
     console.log("Item removido com sucesso.");
 }
 
 function exibirLista()
 {
     listaDeCompras.length === 0 ? console.log("Carrinho vazio.") : console.log(listaDeCompras);
-
-}
-
-function sair()
-{
-    console.log("Obrigado por utilizar nossos serviços, tenha um ótimo dia!")
 }
