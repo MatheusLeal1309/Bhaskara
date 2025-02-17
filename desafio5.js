@@ -70,5 +70,5 @@ function removerUsuario()
 
 function exibirListaDeUsuarios()
 {
-    console.log(cadastroUsuario);
+    cadastroUsuario.length === 0 ? console.log("Nenhum usuário encontrado.") : console.log(cadastroUsuario);
 }
